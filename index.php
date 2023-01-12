@@ -18,7 +18,10 @@ $f3 = Base::instance();
 // -> invoke instance method
 //this won't allow clients to directly access the php files, gives 404 error
 $f3->route('GET /', function (){
-    echo '<h1>Hello, Fat Free!</h1>';
+//    echo '<h1>Hello, Fat Free!</h1>';
+
+    $view = new Template();
+    echo $view-> render('views/home.html');
 });
 
 
